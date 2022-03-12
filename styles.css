@@ -1,0 +1,125 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    padding: 0;
+    margin: 0;
+    background-color: hsl(240, 3%, 7%);
+    color: hsl(0, 0%, 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    min-width: 300px;
+}
+
+h1 {
+    font-size: 2rem;
+    letter-spacing: 0.75rem;
+}
+
+.game {
+    margin-bottom: 10%;;
+}
+
+.popup {
+    margin: 1%;
+    margin-top: 0%;
+    padding: 2.5% 2.5%;
+    background-color: hsl(240, 3%, 7%);
+}
+
+.result {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin: 5%;
+    margin-top: 0%;
+    padding: 1% 2%;
+    background-color: hsl(0, 0%, 61%);
+    color: black;
+    border-radius: 10px;
+}
+
+.guess {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: rem(2);
+}
+
+.tile {
+    border: 2px solid hsl(0, 0%, 36%);
+    width: 2.5rem;
+    height: 2.5rem;
+    margin: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.has-letter {
+    border:2px solid hsl(0, 0%, 61%);
+}
+
+.correct {
+    background-color: hsl(120, 90%, 36%);
+    border-color: hsl(120, 90%, 36%);
+}
+
+.present {
+    background-color: hsl(49, 51%, 47%);
+    border-color: hsl(49, 51%, 47%);
+}
+
+.absent {
+    background-color: hsl(0, 0%, 50%);
+    border-color: hsl(0, 0%, 50%);
+}
+
+.tile.flip {
+    animation: 0.5s linear flipping;
+}
+
+@keyframes flipping {
+    0% {
+        transform: rotateX(0deg);
+    }
+    50% {
+        transform: rotateX(90deg);
+    }
+    100% {
+        transform: rotateX(0deg);
+    }
+}
+
+.keyboard {
+    width : 510px;
+    display: flex;
+    flex-wrap: wrap;
+    position: fixed;
+    bottom: 0;
+    margin-bottom: 100px;
+}
+
+.keyboard button {
+    width: 43px;
+    height: 58px;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: #818384;
+    margin: 4px;
+    text-align: center;
+    color: hsl(0, 0%, 100%);
+}
+
+
+.keyboard button:nth-child(11){
+    margin-left: 20px;
+}
+.keyboard button:nth-child(20) {
+    width: 50px;
+}
+.keyboard button:nth-child(28) {
+    width: 80px;
+}
