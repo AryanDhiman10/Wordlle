@@ -2,6 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const app = express();
 const axios = require("axios").default;
+require('dotenv').config();
 
 app.use(cors());
 
@@ -12,7 +13,7 @@ app.get('/word', (req, res) => {
         params: {count: '2', wordLength: '6'},
         headers: {
           'x-rapidapi-host': 'random-words5.p.rapidapi.com',
-          'x-rapidapi-key': 'd63105299cmsh13fb69ce367e88fp10d8b8jsn454b15a1519c'
+          'x-rapidapi-key': process.env.RapidApiKey
         }
       };
       
