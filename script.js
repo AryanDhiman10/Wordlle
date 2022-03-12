@@ -104,7 +104,7 @@ const checkWin = () => {
         currentGuess = document.querySelector('#guess' + currentGuessCount);
         if(currentGuessCount > 7){
             document.querySelector('.popup').classList.add('result');
-            document.querySelector('.popup').innerText = 'GAME OVER';
+            document.querySelector('.popup').innerText = solutionWord;
         }
     }
 }
