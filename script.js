@@ -6,6 +6,7 @@ const getWordle = () =>{
         .then( res => res.json())
         .then( json => {
             solutionWord = json.toUpperCase();
+            console.log(solutionWord);
         })
         .catch(err => console.log(err));
 }
